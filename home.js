@@ -226,23 +226,21 @@ const foodPrices = {
 const myBtn = () => {
     const selectedState = stateSelect.value;
     const selectedCategory = categorySelect.value;
-    
+
     if (!selectedState && !selectedCategory) {
         alert("Select a state and a food category!")
-        return;  
+        return;
     }
 
-    if(!selectedState){
+    if (!selectedState) {
         alert("Select a state!")
     }
-    if(!selectedCategory){
+    if (!selectedCategory) {
         alert("Select a food category!")
     }
-    
-    const items = foodPrices[selectedState][selectedCategory];
-    
 
-    if(!foodPrices[selectedState] || !foodPrices[selectedState][selectedCategory]);
+    const items = foodPrices[selectedState][selectedCategory];
+
     emptyState.innerHTML =
         `   <tr>
             <th>Item(s)</th>
